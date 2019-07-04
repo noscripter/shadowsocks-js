@@ -21,7 +21,9 @@
     "test-coverage": "istanbul cover _mocha",
     "travis-ci-test": "mocha --fgrep '[local only]' --invert",
     "travis-ci-test-coverage": "istanbul cover _mocha -- --fgrep '[local only]' --invert",
-    "benchmark": "node benchmark/run"
+    "benchmark": "node benchmark/run",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "oyyd (oyydoibh@gmail.com)",
   "license": "BSD",
@@ -44,6 +46,8 @@
     "minimist": "^1.2.0",
     "socks": "^1.1.9",
     "uglify-js": "^2.6.2",
-    "winston": "^2.2.0"
-  }
+    "winston": "^2.2.0",
+    "snyk": "^1.189.0"
+  },
+  "snyk": true
 }
